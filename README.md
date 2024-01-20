@@ -36,10 +36,13 @@ print(f'TRX balance: {my_balance}')
 my_usdt_balance = my_wallet.get_coin_balance(tronLib.Contract.USDT)
 print(f'USDT balance: {my_balance}')
 
+#Check the given address for validity
+is_valid_address(SOME_TRC20_ADDRESS)
+
 #Send TRX
 tx_id, status, data = my_wallet.send_trx(RECIPIENT_ADDRESS, AMOUNT_TRX_TO_SEND)
 
-#Send USDT (you can add other token contract address to Contracts enum and use it to send another token)
+#Send USDT (you can add another token contract address to the Contracts enum and use it to send another token)
 tx_id, status, data = my_wallet.send_coin(tronLib.Contract.USDT, RECIPIENT_ADDRESS, AMOUNT_TRX_TO_SEND)
 
 #Swap TRX to USDT via SunSwap contract
