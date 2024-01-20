@@ -1,6 +1,10 @@
 # TRC20 Library
 Small Python library to manage TRC20 wallet. Allows to send USDT, TRX, and swap USDT&lt;->TRX
 
+The main API for TRX-USDT rate is [CoinGecko](https://www.coingecko.com/) but as they made their API very limited to non-paid users, it's better to use some backup API ([LiveCoinWatch](https://www.livecoinwatch.com/) for example).
+
+Also, I hardly handle any errors in the library, so it is advisable to do it externally when using it.
+
 # Requirements
 [tronpy](https://pypi.org/project/tronpy/) >= 0.4.0 (tested on 0.4.0)
 
